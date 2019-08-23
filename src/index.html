@@ -1,8 +1,12 @@
 <html>
 
 <head>
-    <title>Extra data</title>
+    <title>MyMap Example</title>
     <style type="text/css" rel="stylesheet">
+        html {
+            position: relative;
+        }
+        
         body {
             width: 100%;
             background: #4262b0;
@@ -17,12 +21,130 @@
             width: 100%;
             height: 100%;
         }
+        
+        .tips {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 5px 10px;
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            border-radius: 4px;
+        }
     </style>
 </head>
 
 <body>
     <div class="canvas" id="map"></div>
-    <script src="index.js" type="text/javascript"></script>
+    <div class="tips"></div>
+
 </body>
+<script type="text/javascript">
+    let map = new MyMap('map');
+    map.addEvents([{
+        name: '上海',
+        coordinate: [121.47, 31.233]
+    }, {
+        name: '北京',
+        coordinate: [116.41, 39.90]
+    }, {
+        name: '香港',
+        coordinate: [114.17, 22.32]
+    }, {
+        name: '普吉岛',
+        coordinate: [98.34, 7.95]
+    }, {
+        name: '敦煌',
+        coordinate: [94.66, 40.14]
+    }, {
+        name: '黄山',
+        coordinate: [118.33, 29.71]
+    }, {
+        name: '马鞍山',
+        coordinate: [118.50, 31.67]
+    }, {
+        name: '合肥',
+        coordinate: [117.23, 31.82]
+    }, {
+        name: '淮南',
+        coordinate: [116.99, 32.62]
+    }, {
+        name: '南京',
+        coordinate: [118.79, 32.06]
+    }, {
+        name: '深圳',
+        coordinate: [114.06, 22.54]
+    }, {
+        name: '广州',
+        coordinate: [113.26, 23.13]
+    }, {
+        name: '佛山',
+        coordinate: [113.12, 23.02]
+    }, {
+        name: '古格王朝',
+        coordinate: [91.14, 31.46]
+    }, {
+        name: '拉萨',
+        coordinate: [116.99, 29.65]
+    }, {
+        name: '西宁',
+        coordinate: [101.78, 36.62]
+    }, {
+        name: '仙本那',
+        coordinate: [118.61, 4.48]
+    }, {
+        name: '奥克兰',
+        coordinate: [174.88, -40.90]
+    }, {
+        name: '怀托莫',
+        coordinate: [175.11, -38.26]
+    }, {
+        name: '马塔马塔',
+        coordinate: [175.78, -37.81]
+    }, {
+        name: '基督城',
+        coordinate: [172.64, -43.53]
+    }, {
+        name: '福克斯冰川',
+        coordinate: [170.01, -43.46]
+    }, {
+        name: '瓦纳卡',
+        coordinate: [169.13, -44.70]
+    }, {
+        name: '皇后镇',
+        coordinate: [168.66, -45.03]
+    }, {
+        name: '达尼丁',
+        coordinate: [170.50, -45.88]
+    }, {
+        name: '蒂阿瑙',
+        coordinate: [167.72, -45.41]
+    }, {
+        name: '华盛顿',
+        coordinate: [-77.04, 38.91]
+    }, {
+        name: '旧金山',
+        coordinate: [-122.42, 37.77]
+    }, {
+        name: '曼谷',
+        coordinate: [100.50, 13.76]
+    }, {
+        name: '洛杉矶',
+        coordinate: [-118.24, 34.05]
+    }]);
+
+    const tips = document.querySelector('.tips');
+    map.on('mousemove', function(e, data) {
+        if (data) {
+            tips.style.top = e.pageY + 10;
+            tips.style.left = e.pageX + 10;
+            tips.style.display = 'block';
+            tips.innerText = data.map(d => d.name).join('\n');
+        } else {
+            tips.style.display = 'none';
+        }
+    });
+</script>
 
 </html>

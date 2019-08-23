@@ -1,2 +1,2 @@
 # mw-map
-A tutorial of create an elegant global view map.
+An elegant global view map.
