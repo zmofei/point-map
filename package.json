@@ -1,6 +1,6 @@
 {
-  "name": "mymap",
-  "version": "1.0.0",
+  "name": "point-map",
+  "version": "0.1.0",
   "description": "An elegant global view map.",
   "main": "dist/mymap.min.js",
   "scripts": {
