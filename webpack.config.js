@@ -3,9 +3,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: './src/index.js',
   output: {
-    library: 'MyMap',
-    libraryExport: 'MyMap',
-    filename: 'mymap.min.js',
+    library: 'PointMap',
+    libraryExport: 'PointMap',
+    filename: 'pointmap.min.js',
     libraryTarget: 'umd'
   },
   plugins: [new HtmlWebpackPlugin({

@@ -1,7 +1,7 @@
 import coordinate from './coordinate';
 import { dataDecode } from './helper';
 
-export class MyMap {
+export class PointMap {
   constructor(dom, config) {
     this.globalRawData = dataDecode(coordinate);
     this.coordinate = { bbox: [-180, -85, 180, 85], grid: 2.5 }
