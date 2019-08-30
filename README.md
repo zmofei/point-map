@@ -3,6 +3,10 @@ An elegant global view map.
 
 [Live Demo](https://zmofei.github.io/point-map/dist/)
 
+[How we mad this](https://www.himofei.com/blog/article/5d68d93223d760b4bf736014)
+
+[相关介绍](https://www.zhuwenlong.com.com/blog/article/5d68d93223d760b4bf736014)
+
 ![bannber](doc/img/banner.gif)
 
 ## Usage
