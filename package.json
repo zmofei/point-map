@@ -4,7 +4,7 @@
   "description": "An elegant global view map.",
   "main": "dist/mymap.min.js",
   "scripts": {
-    "build": "webpack",
+    "build": "rm -rf dist/ && webpack",
     "dev": "webpack-dev-server",
     "test": "echo 'None test right now' && exit 1;"
   },
