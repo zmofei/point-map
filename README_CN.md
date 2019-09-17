@@ -1,44 +1,41 @@
 # Point-map
-An elegant global view map.
 
-[Live Demo](https://zmofei.github.io/point-map/dist/)
+绘制优美的点阵地图。
+
+[在线Demo](https://zmofei.github.io/point-map/dist/)
 
 ![bannber](doc/img/banner.gif)
 
-[How we mad this](https://www.himofei.com/blog/article/5d68d93223d760b4bf736014)
-
 [相关介绍](https://www.zhuwenlong.com/blog/article/5d68d93223d760b4bf736014)
 
-[中文文档](README_CN.md)
+## 用法
 
-## Usage
+### 1. 安装
 
-### 1. Install
+Point-map 可以通过`NPM`安装或者通过`<Script>` 标签直接引用
 
-You can use this library through `NPM`, Javascript `<Script>` tag from CDN.
+#### 1.1 方案一：通过NPM安装
 
-#### 1.1 NPM
-
-Use NPM install package
+通过如下命令安装组件
 
 ```bash
 npm install point-map
 ```
 
-import it in your .js file
+通过import导入NPM install的组件
 
 ```javascript
 import PointMap from 'point-map'
 ```
 
-#### 1.2 Script 
+#### 1.2 通过Script标签使用
 
 ```html
 <script src="https://unpkg.com/point-map/dist/mymap.min.js" crossorigin></script>
 ```
 
 
-## Hello World
+## 示例
 
 ```html
 <html>
@@ -68,13 +65,13 @@ import PointMap from 'point-map'
 </html>
 ```
 
-## Interfaces
+## 接口说明
 
 ### PointMap(elementID)
 
-Create an point map instances by given a DOM's id.
+创建一个地图实例，其中`elementID`为放置地图的Dom的id。
 
-Example:
+示例:
 
 ```javascript
 new PointMap('map');
@@ -82,13 +79,13 @@ new PointMap('map');
 
 ### PointMap.addEvent(EventObject)
 
-Add a event point on the map.
+添加地图点
 
-`EventObject.name` [String] The name of the point, Could be anything.
-`EventObject.coordinate` [Array] The Latitude and longitude of the point [Latitude, Longitude]
-`EventObject[others]` [Any] Other Customer propertis of the point;
+`EventObject.name` [String] 点名字，可自定义。
+`EventObject.coordinate` [Array]  点的经纬度 [纬度, 经度]
+`EventObject[others]` [Any] 自定义的其他数据;
 
-Example:
+示例:
 
 ```javascript
 map.addEvents({
@@ -100,9 +97,9 @@ map.addEvents({
 
 ### PointMap.addEvents([EventPoints])
 
-Add many event points on the map, This is a short cut of the PointMap.addEvent.
+批量添加点，`PointMap.addEvent`的批量添加方式。
 
-Example:
+示例:
 
 ```javascript
 map.addEvents([
@@ -119,13 +116,13 @@ map.addEvents([
 
 ### PointMap.on(EventName, CallbackFunction)
 
-Add an event on the map.
+添加点事件。
 
-`EventName` [String] the event name could be `mousemove`,`click`
+`EventName` [String] 事件名称，可为 `mousemove`,`click`
 
-`CallbackFunction(event, Pointinfo)` When the event trigger, the 1st param is the DOM event, The 2nd param is object of the customer Point info.
+`CallbackFunction(event, Pointinfo)` 当事件被触发时该回调会被调用，第一个参数位Dom的event对象，第二个参数为点的属性。
 
-Examples:
+示例：
 
 ```
 let map = new PointMap('map');
@@ -147,11 +144,11 @@ map.on('mousemove', function(e, data) {
 
 ### PointMap.remove(EventName, EventFunction)
 
-Remove an event on the map.
+移除事件。
 
-`EventName` [String] the event name
+`EventName` [String] 事件名称
 
-`EventFunction` The function Which we add to the map
+`EventFunction` 移除的事件方法
 
 Examples:
 
