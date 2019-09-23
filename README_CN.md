@@ -8,6 +8,8 @@
 
 [相关介绍](https://www.zhuwenlong.com/blog/article/5d68d93223d760b4bf736014)
 
+[English version](README.md)
+
 ## 用法
 
 ### 1. 安装
@@ -150,7 +152,7 @@ map.on('mousemove', function(e, data) {
 
 `EventFunction` 移除的事件方法
 
-Examples:
+示例:
 
 ```
 let map = new PointMap('map');
