@@ -168,3 +168,15 @@ const fn = (e,data)=>{console.log('you are moving')};
 map.on('mousemove', fn);
 map.remove('mousemove', fn);
 ```
+
+## Development
+
+Requires Node.js 22.15 or later.
+
+```bash
+npm ci
+npm test
+npm run dev
+```
+
+The development server listens on 127.0.0.1. `npm test` builds the production bundle and checks the browser export, canvas drawing, and point event APIs.
