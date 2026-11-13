@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: './src/index.js',
   output: {
+    clean: true,
     library: 'PointMap',
     libraryExport: 'PointMap',
     filename: 'pointmap.min.js',
